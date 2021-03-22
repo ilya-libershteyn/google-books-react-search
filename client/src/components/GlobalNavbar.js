@@ -1,4 +1,4 @@
-import { Navbar} from "react-bootstrap";
+import { Nav, Navbar} from "react-bootstrap";
 
 function GlobalNavbar() {
     return (

@@ -1,4 +1,4 @@
-import { Jumbotron } from "react-bootstrap";
+import { Jumbotron, Container } from "react-bootstrap";
 
 function Header() {
     return (
@@ -13,3 +13,5 @@ function Header() {
         </Jumbotron>
     )
 }
+
+export default Header;

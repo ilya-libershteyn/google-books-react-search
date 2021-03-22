@@ -1,6 +1,9 @@
 import React from "react";
+import {Container} from "react-bootstrap";
 import "bootstrap/scss/bootstrap.scss";
 import GlobalNavbar from "./components/GlobalNavbar";
+import Header from "./components/Header";
+import Search from "./components/Search";
 
 function App() {
     return (
@@ -8,15 +11,8 @@ function App() {
         <GlobalNavbar/>
         <Container>
           <Header/>
+          <Search/>
         </Container>
-        <div className="container">
-          <div className="row">            
-            <h2>Welcome to React</h2>
-          </div>
-          <p className="App-intro">
-            To get started, edit <code>src/App.js</code> and save to reload.
-          </p>
-        </div>
       </div>
     );
 }
