@@ -1,7 +1,8 @@
-import { Card } from "react-bootstrap"
-import SaveButton from "./SaveButton";
+import { Button } from "bootstrap";
+import { Card } from "react-bootstrap";
+import DeleteButton from "./DeleteButton";
 
-function Results({books}) {
+function ViewSaved({books}) {
     
     if(books.length)
     {
@@ -9,16 +10,15 @@ function Results({books}) {
             <Card>
                 <Card.Body>
                     <div>
-                        <h2>Results</h2>
                         {books.map((book) => {
-                            <Card className="my-4" key={book.id}>
+                            <Card className="my-4" key={book._id}>
                                 <Card.body>
-                                    <SaveButton></SaveButton>
+                                    <Button href={book.link}>View</Button>
+                                    <DeleteButton bookID={book._id} className="ml-2"/>
                                     <img src={book.image}/>
                                     <p>{book.title}</p>
                                     <p>{book.authors}</p>
                                     <p>{book.description}</p>
-                                    <p>{book.link}</p>
                                 </Card.body>
                             </Card>
                         })}
@@ -40,4 +40,4 @@ function Results({books}) {
     
 }
 
-export default Results;
+export default ViewSaved;

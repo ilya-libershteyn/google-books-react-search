@@ -1,6 +1,9 @@
 import axios from "axios";
 
 const api = {
+    getGoogleBooks: async function() {
+
+    },
     // Gets all books
     getBooks: function() {
         return axios.get("/api/books");
@@ -14,7 +17,7 @@ const api = {
         return axios.delete("/api/books/" + id);
     },
     // Saves a book to the database
-    saveBook: function(bookData) {
+    saveBook: async function(bookData) {
         return axios.post("/api/books", bookData);
     }
 }

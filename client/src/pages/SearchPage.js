@@ -1,4 +1,5 @@
 import { useState } from "react";
+import Results from "../components/Results";
 import Search from "../components/Search"
 
 function SearchPage() {
@@ -7,7 +8,7 @@ function SearchPage() {
     return (
         <div>
             <Search setBooks={setBooks}/>
-            <Results books={}/>
+            <Results books={books}/>
         </div>
     )
 }
