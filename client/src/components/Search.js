@@ -1,7 +1,8 @@
+import React, {useRef} from "react";
 import { Button, Card, Form} from "react-bootstrap";
 import api from "../utils/api";
 
-function Search() {
+function Search({setBooks}) {
     
     const bookInput = useRef();
 

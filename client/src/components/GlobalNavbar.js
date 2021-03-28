@@ -1,7 +1,7 @@
 import { Nav, Navbar} from "react-bootstrap";
 
 function GlobalNavbar() {
-    return (
+    return ( 
         <Navbar bg="primary" variant="dark" expand="lg">
             <Navbar.Brand href="#home">React-Bootstrap</Navbar.Brand>
             <Navbar.Toggle aria-controls="basic-navbar-nav" />
