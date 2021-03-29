@@ -5,16 +5,17 @@ import api from "../utils/api";
 function SavedPage() {
     const [books, setBooks] = useState([]);
    
-    const getBooks = () => {
-        return api.getBooks()
+    const getBooks = (res) => {
+        return api.getBooks(res)
            .then((res) => {
+            //console.log(res.data);
             setBooks(res.data);
            });
     }
 
     useEffect(() => {
         getBooks();
-    }, [setBooks]);
+    }, []);
     
     return (
         <div>

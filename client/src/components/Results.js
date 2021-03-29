@@ -3,7 +3,7 @@ import { Card } from "react-bootstrap"
 import SaveButton from "./SaveButton";
 
 function Results({books}) {
-    console.log(books);
+    
     return (
         <Card>
             <Card.Body>

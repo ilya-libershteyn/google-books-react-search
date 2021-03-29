@@ -1,43 +1,36 @@
-import { Button } from "bootstrap";
-import { Card } from "react-bootstrap";
+import React from "react";
+import { Button, Card } from "react-bootstrap";
 import DeleteButton from "./DeleteButton";
 
-function ViewSaved({books}) {
-    
-    if(books.length)
-    {
-        return (
-            <Card>
-                <Card.Body>
-                    <div>
-                        {books.map((book) => {
-                            <Card className="my-4" key={book._id}>
-                                <Card.body>
-                                    <Button href={book.link}>View</Button>
-                                    <DeleteButton bookID={book._id} className="ml-2"/>
-                                    <img src={book.image}/>
-                                    <p>{book.title}</p>
-                                    <p>{book.authors}</p>
-                                    <p>{book.description}</p>
-                                </Card.body>
-                            </Card>
-                        })}
-                    </div>
-                </Card.Body>
-            </Card>
-        )
-    }
-    else
-    {
-        return (
-            <Card>
-                <Card.Body>
-                    <h2>No Results</h2>
-                </Card.Body>
-            </Card>
-        )
-    }
-    
+function ViewSaved({books, getBooks}) {   
+    books.map(book => console.log(book));
+    return (
+        <Card className="my-4">
+            <Card.Body>
+                {books.length ? (
+                <div>
+                    {books.map(book => (
+                        <Card className="my-4" key={book._id}>
+                            <Card.Body>
+                                <Button href={book.link}>View</Button>
+                                <DeleteButton bookID={book._id} getBooks={getBooks} className="ml-2"/>
+                                <p>{book.title}</p>
+                                <p>{book.authors}</p>
+                                <p>{book.description}</p>
+                            </Card.Body>
+                        </Card>
+                    ))}
+                </div>
+                ) : (
+                <Card>
+                    <Card.Body>
+                        <h2>No Results</h2>
+                    </Card.Body>
+                </Card>
+                )}
+            </Card.Body>
+        </Card>
+    )
 }
 
 export default ViewSaved;

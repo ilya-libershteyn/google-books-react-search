@@ -8,7 +8,7 @@ function SaveButton({book, updateBook}) {
             let newBook = {
                 _id: book.id,
                 title: book.volumeInfo.title,
-                authors: [book.volumeInfo.authors],
+                authors: book.volumeInfo.authors,
                 description: book.volumeInfo.description,
                 image: book.volumeInfo.thumbnail,
                 link: book.volumeInfo.infoLink,
