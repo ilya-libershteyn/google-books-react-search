@@ -8,6 +8,7 @@
     "bootstrap": "^4.6.0",
     "dotenv": "^8.2.0",
     "node-sass": "^5.0.0",
+    "popper": "^1.0.1",
     "popper.js": "^1.16.1",
     "react": "^17.0.1",
     "react-bootstrap": "^1.5.2",
