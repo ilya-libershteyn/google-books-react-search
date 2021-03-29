@@ -4,10 +4,9 @@ function Header() {
     return (
         <Jumbotron fluid>
             <Container>
-                <h1>Fluid jumbotron</h1>
+                <h1>Google Book Search</h1>
                 <p>
-                This is a modified jumbotron that occupies the entire horizontal space of
-                its parent.
+                Search and save books from Google.
                 </p>
             </Container>
         </Jumbotron>

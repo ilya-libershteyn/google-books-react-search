@@ -3,7 +3,6 @@ import {Container} from "react-bootstrap";
 import "bootstrap/scss/bootstrap.scss";
 import GlobalNavbar from "./components/GlobalNavbar";
 import Header from "./components/Header";
-
 import {BrowserRouter as Router, Route, Switch} from "react-router-dom";
 import SearchPage from "./pages/SearchPage";
 import SavedPage from "./pages/SavedPage";
@@ -12,7 +11,7 @@ import NotFoundPage from "./pages/NotFoundPage";
 function App() {
     return (
       <Router>
-        <GlobalNavbar/>
+        <GlobalNavbar isloggedin={false}/>
         <Container className="py-5">
           <Header />
           <Switch>

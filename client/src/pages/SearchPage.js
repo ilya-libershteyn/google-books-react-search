@@ -1,6 +1,6 @@
-import { useState } from "react";
+import React, { useState } from "react";
 import Results from "../components/Results";
-import Search from "../components/Search"
+import Search from "../components/Search";
 
 function SearchPage() {
     const [books, setBooks] = useState([]);

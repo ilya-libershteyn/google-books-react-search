@@ -1,8 +1,15 @@
 import axios from "axios";
+require('dotenv').config();
 
 const api = {
-    getGoogleBooks: async function() {
-
+    getGoogleBooks: async function(title) {
+        return axios.get("https://www.googleapis.com/books/v1/volumes?q=" 
+                        + title + "&key=" + process.env.API_KEY)
+                    .then(books => {
+                        console.log(books);
+                        //res.json(books);
+                    })
+                    //.catch(err => err.status.json(err));
     },
     // Gets all books
     getBooks: function() {
