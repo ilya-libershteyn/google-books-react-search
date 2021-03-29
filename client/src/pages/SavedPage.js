@@ -4,11 +4,16 @@ import api from "../utils/api";
 
 function SavedPage() {
     const [books, setBooks] = useState([]);
-    useEffect(() => {
+   
+    const getBooks = () => {
         return api.getBooks()
-           .then(({data}) => {
-            setBooks.apply(data);
+           .then((res) => {
+            setBooks(res.data);
            });
+    }
+
+    useEffect(() => {
+        getBooks();
     }, [setBooks]);
     
     return (
