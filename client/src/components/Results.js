@@ -7,19 +7,19 @@ function Results({books}) {
     return (
         <Card>
             <Card.Body>
-                {books.length > 0? (
+                {books.length ? (
                 <div>
                     <h2>Results</h2>
                     {books.map(book => (
                         <Card className="my-4" key={book.id}>
-                            <Card.body>
+                            <Card.Body>
                                 <SaveButton book={book}></SaveButton>
-                                <img src={book.volumeInfo.imageLinks !== undefined ? book.volumeInfo.imageLinks.thumbnail : ''} alt={book.title}/>
-                                <p>{book.volumeInfo.title}</p>
-                                <p>{book.volumeInfo.authors}</p>
+                                <img src={book.volumeInfo.imageLinks.thumbnail} alt={book.title}/>
+                                <h2>{book.volumeInfo.title}</h2>
+                                <h3>{book.volumeInfo.authors}</h3>
                                 <p>{book.volumeInfo.description}</p>
                                 <p>{book.volumeInfo.link}</p>
-                            </Card.body>
+                            </Card.Body>
                         </Card>
                     ))}
                 </div>

@@ -21,7 +21,7 @@ mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/googlebooksreac
   useFindAndModify: false,
 });
 
-app.use("/api", require("./routes/index"));
+app.use("/api", require("./routes/api"));
 
 // Send every request to the React app
 // Define any API routes before this runs

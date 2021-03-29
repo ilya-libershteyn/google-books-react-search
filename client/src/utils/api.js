@@ -24,8 +24,8 @@ const api = {
         return axios.delete("/api/books/" + id);
     },
     // Saves a book to the database
-    saveBook: async function(bookData) {
-        return axios.post("/api/books", bookData);
+    saveBook: function(bookData) {
+        return axios.post("/api/books/", bookData);
     }
 }
 
